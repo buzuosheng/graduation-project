@@ -41,7 +41,7 @@ class tvSpider(RedisSpider):
         # 字符串前加u表示处理中文字符
 
         tv_url = result.xpath('//a[@class="nbgnbg"]/@href').extract()[0]
-        url = tv_url.split('?')[0]
+        url = tv_url.split('photo')[0]
 
         # 剧名
         title = result.xpath(u'//div[@id="content"]/h1/span[1]/text()').extract()[0] + result.xpath('//div[@id="content"]/h1/span[2]/text()').extract()[0]

@@ -7,7 +7,7 @@
 import scrapy
 import pymysql
 import pymysql.cursors
-import importlib,sys 
+import importlib,sys
 importlib.reload(sys)
 from scrapy.exporters import JsonItemExporter
 from douban_slaver.items import db_slaverItem
@@ -76,7 +76,7 @@ class SavePipeline(object):
 
     def process_item(self, item, spider):
         insert_sql = """
-            insert into tv_tb(title, alias, url, tv_img, director, actors, tv_type, c_or_r, first_time, series, single, rate, votes_num, synopsis)
+            insert into tv_tb2(title, alias, url, tv_img, director, actors, tv_type, c_or_r, first_time, series, single, rate, votes_num, synopsis)
             value(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
         """
         self.cursor.execute(insert_sql, (item["title"], item["alias"], item["url"], item["tv_img"],

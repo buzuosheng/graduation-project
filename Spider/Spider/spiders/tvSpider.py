@@ -78,7 +78,7 @@ class tvSpider(scrapy.Spider):
         # 首播
         first_time = result.xpath('//div[@id="content"]//span[@property="v:initialReleaseDate"]/text()').extract()[0]
 
-        # 集数 
+        # 集数
         series = result.xpath(u'//div[@id="content"]//span[text()="集数:"]/following::text()[1]').extract()[0]
 
         # 单集
@@ -106,7 +106,7 @@ class tvSpider(scrapy.Spider):
         tv_item['director'] = director.strip()
         tv_item['actors'] = actors.strip()
         tv_item['tv_type'] = tv_type.strip()
-        tv_item['country_or_region'] = country_or_region.strip() 
+        tv_item['country_or_region'] = country_or_region.strip()
         tv_item['first_time'] = first_time.strip()
         tv_item['series'] = series.strip()
         tv_item['single'] = single.strip()
@@ -120,9 +120,9 @@ class tvSpider(scrapy.Spider):
         # print('剧名：' + title)
         # print('又名：' + alias)
         # print('海报：' + tv_img)
-        # print('导演：' + director)    
-        # print('主演：' + actors)       
-        # print('类型：' + tv_type)     
+        # print('导演：' + director)
+        # print('主演：' + actors)
+        # print('类型：' + tv_type)
         # print('制片国家或地区：' + country_or_region)
         # print('首播：' + first_time)
         # print('集数：' + series)
