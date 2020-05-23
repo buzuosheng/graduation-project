@@ -23,8 +23,8 @@ NEWSPIDER_MODULE = 'Spider.spiders'
 ITEM_PIPELINES = {
   # 'Spider.pipelines.tvSpiderPipeline': 300,
   # 'Spider.pipelines.GetImagePipeline': 299,
-  # 'Spider.pipelines.SaveDBPipeline':  301,
-  'Spider.pipelines.CSVPipelime': 400,
+  'Spider.pipelines.SaveDBPipeline':  301,
+  # 'Spider.pipelines.CSVPipelime': 400,
 }
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
