@@ -26,15 +26,15 @@ const App: React.FC = () => {
     rate: '9.9'
   }
 
-  const initState = {
-      name: '肖申克的救赎',
-      img: 'https://img3.doubanio.com/view/photo/s_ratio_poster/public/p480747492.webp',
-      info: '希望让人自由'
-    }
   const [movie, setMovie] = useState(init)
 
   return (
     <div>
+      {/* <Helmet>
+        <title>时间戳转换 - 前端武器库</title>
+        <meta name='description' content='时间戳在线转换' />
+        <meta name='keywords' content='时间,时间戳,在线工具,转换' />
+      </Helmet> */}
       <div className = 'header'></div>
       <div className = 'movie_main'>
         <img height = {300} width = {200} alt = {movie.title} src = {movie.img} />
