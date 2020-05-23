@@ -23,7 +23,8 @@ NEWSPIDER_MODULE = 'Spider.spiders'
 ITEM_PIPELINES = {
   # 'Spider.pipelines.tvSpiderPipeline': 300,
   # 'Spider.pipelines.GetImagePipeline': 299,
-  'Spider.pipelines.SaveDBPipeline':301
+  # 'Spider.pipelines.SaveDBPipeline':  301,
+  'Spider.pipelines.CSVPipelime': 400,
 }
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -41,6 +42,13 @@ IMAGES_STORE = 'D:\\Design\\code\\Spider\\Spider\\image'
 
 # 图片有效期30天
 IMAGES_EXPIRES = 30
+
+# 下载延迟3秒
+# DOWNLOAD_DELAY = 3
+
+# 禁止重定向请求
+REDIRECT_ENABLED = False
+
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -60,7 +68,7 @@ IMAGES_EXPIRES = 30
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16

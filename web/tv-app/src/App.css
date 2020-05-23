@@ -1,0 +1,44 @@
+.movie_main {
+	flex-direction: column;
+	width: 40%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 30%;
+	align-items: center;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	height: 2rem;
+}
+
+p {
+	text-align: center;
+}
+
+button {
+	display: block;
+	width: 7.5rem;
+	height: 2.5rem;
+	background-color: #33ccff;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+	border-radius: 25px;
+	border: none;
+	box-shadow: none;
+	text-decoration: none;
+	transition: box-shadow 0.5s;
+	-webkit-transition: box-shadow 0.5s;
+}
+
+button:hover {
+	box-shadow: 0px 0px 5px 1px #808080;
+}
+
+button:active {
+	box-shadow: 0px 0px 5px 1px #FF0000;
+}
