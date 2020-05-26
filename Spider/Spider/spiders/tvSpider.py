@@ -12,7 +12,7 @@ class tvSpider(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super(tvSpider, self).__init__(*args, **kwargs)
         # + str(x) for x in range(0, 60 ,20)
-        self.start_urls = ["https://movie.douban.com/j/search_subjects?type=tv&tag=热门&sort=recommend&page_limit=20&page_start=" + str(x) for x in range(0, 20 ,20)]
+        self.start_urls = ["https://movie.douban.com/j/search_subjects?type=tv&tag=热门&sort=recommend&page_limit=20&page_start=" + str(x) for x in range(0, 100 ,20)]
 
     def parse(self, response):
         results = json.loads(response.body)['subjects']

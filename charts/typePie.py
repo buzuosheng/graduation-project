@@ -13,7 +13,7 @@ conn=pymysql.connect(
 )
 
 cur = conn.cursor()
-select_sql = "select tv_type from tv_tb"
+select_sql = "select tv_type from test"
 cur.execute(select_sql)
 ret = cur.fetchall()
 # print(ret)
